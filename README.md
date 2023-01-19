@@ -2,7 +2,6 @@
 Here you can find some examples of our API in Python and Typescript
 
 
-
 ## Typescript
 
 do not forget to install the basic setup to run your .ts files
@@ -15,9 +14,10 @@ sudo apt install npm
 
 
 
-have node version bigger than 16.17.0
-
+It is also neet to have a version of node bigger than 16.17.0
 
 
 
 ## Python
+
+In construction....
