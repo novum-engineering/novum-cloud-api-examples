@@ -1,5 +1,5 @@
 {
-  "name": "novum-cloud-login-example",
+  "name": "novum-cloud-query-battery-example",
   "version": "1.0.0",
   "description": "This code how to use our login function from novum-cloud-api-client",
   "main": "queryBattery.ts",
@@ -7,6 +7,9 @@
   "author": "Leonardo <l.biz@novum-engineering.com>",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "start": "ts-node queryBattery.ts"
+  },
   "dependencies": {
     "novum-cloud-api-client": "^1.0.5",
     "ts-node": "^10.9.1",
