@@ -6,10 +6,9 @@ const apiClient = new APIClient();
   try {
     const user = await apiClient.login("YOUR_EMAIL", "YOUR_PASSWORD");
     apiClient._setUser(user);
-    console.log(
-      `ID authenticated. You are using the ${user.profile.name}'s account`
-    );
-    await apiClient.logout();
+    // In order to get the "id" of the require battery one can do that copying the id from the Service Center or querying your battery and get its id
+    const answer = await apiClient.getBatteryById("BATTERY_ID");
+    console.log(answer);
   } catch (e) {
     console.error(e);
   }
