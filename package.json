@@ -1,0 +1,16 @@
+{
+  "name": "novum-cloud-api-examples",
+  "version": "1.0.1",
+  "description": "To show users how to use the novum batteries API creating and mutating batteries.",
+  "main": "index.js",
+  "repository": "git@github.com:novum-engineering/novum-cloud-api-examples.git",
+  "author": "neptuntriton <j.haupt@novum-engineering.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "pretty": "prettier --write ."
+  },
+  "dependencies": {
+    "prettier": "^2.8.3"
+  }
+}

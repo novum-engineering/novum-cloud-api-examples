@@ -1,4 +1,4 @@
-import { APIClient } from "novum-cloud-api-client";
+import { PublicAPIClient as APIClient } from "@novum-batteries/cloud-api-client";
 
 const apiClient = new APIClient();
 
@@ -10,7 +10,7 @@ const apiClient = new APIClient();
       `ID authenticated. You are using the ${user.profile.name}'s account`
     );
     await apiClient.logout();
-  } catch (e) {
-    console.error(e);
+  } catch (e: any) {
+    console.error(e.details);
   }
 })();

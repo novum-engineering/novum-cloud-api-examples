@@ -1,4 +1,4 @@
-import { APIClient } from "novum-cloud-api-client";
+import { PublicAPIClient as APIClient } from "@novum-batteries/cloud-api-client";
 
 const apiClient = new APIClient();
 
