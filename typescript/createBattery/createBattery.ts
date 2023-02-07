@@ -12,12 +12,11 @@ const apiClient = new APIClient();
 
     // In order to create a battery you need to define Partial<TBattery> object where name and battery type are mandatory
     const createdBattery = await apiClient.createBattery({
-      name: "NAME_OF_MY_BATTERY",  // you can choose, should be clever maybe you have a lot of batteries in the future
+      name: "NAME_OF_MY_BATTERY", // you can choose, should be clever maybe you have a lot of batteries in the future
       battery_type: batteryType,
     });
 
     console.log(createdBattery);
-
   } catch (e: any) {
     console.error(e.details);
   }

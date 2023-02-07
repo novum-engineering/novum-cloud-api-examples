@@ -9,7 +9,6 @@ const apiClient = new APIClient();
     // In order to get the "id" of the require battery one can do that copying the id from the Service Center or querying your battery and get its id
     const battery = await apiClient.getBatteryById("BATTERY_ID");
     console.log(battery);
-
   } catch (e: any) {
     console.error(e.details);
   }

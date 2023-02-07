@@ -13,7 +13,6 @@ const apiClient = new APIClient();
     const batteries = await apiClient.getBatteries(filters, options, fields);
 
     console.log(batteries);
-
   } catch (e: any) {
     console.error(e.details);
   }

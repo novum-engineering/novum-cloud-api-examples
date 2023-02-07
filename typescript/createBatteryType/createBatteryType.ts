@@ -15,7 +15,6 @@ const apiClient = new APIClient();
     });
 
     console.log(batteryType);
-
   } catch (e: any) {
     console.error(e.details);
   }
