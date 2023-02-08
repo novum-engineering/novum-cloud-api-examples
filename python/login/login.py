@@ -1,21 +1,10 @@
-from NovumApiClient.NovumApiClient import NovumApiClient
+from NovumApiClient.NovumApiClient import NovumBatteriesClient
 
-api = NovumApiClient('')
+api = NovumBatteriesClient('')
 
-login = api.login('l.biz@novum-engineering.com', 'Amsdsdsd')
-#print(f'ID authenticated. You are using the {login['profile.name']}s account')
+try:
+  login = api.login('YOUR_EMAIL', 'YOUR_PASSWORD')
+  print(f"ID authenticated. You are using the {login['profile']['email']}s account")
+except:
+   raise Exception("Login was not possible")
 
-'''
-
-(async () => {
-  try {
-    const user = await apiClient.login("YOUR_EMAIL", "YOUR_PASSWORD");
-    apiClient._setUser(user);
-    console.log(
-      `ID authenticated. You are using the ${user.profile.name}'s account`
-    );
-    await apiClient.logout();
-  } catch (e: any) {
-    console.error(e.details);
-  }
-})();'''

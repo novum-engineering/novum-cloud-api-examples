@@ -3,6 +3,11 @@ Do not forget to install the basic setup to run your .ts files
 - install [Python](https://www.python.org/downloads/) 3.6 or higher
 - install [pip](https://pip.pypa.io/en/stable/cli/pip_install/)
 
+
+To install our library:
+
+`pip install NovumApiClient`
+
 ### examples
 
 - [login](python/login/readme.md)
