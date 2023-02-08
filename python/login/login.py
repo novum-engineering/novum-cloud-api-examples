@@ -2,7 +2,7 @@ from NovumApiClient.NovumApiClient import NovumApiClient
 
 api = NovumApiClient('')
 
-login = api.login('l.biz@novum-engineering.com', 'Amoeba19')
+login = api.login('l.biz@novum-engineering.com', 'Amsdsdsd')
 #print(f'ID authenticated. You are using the {login['profile.name']}s account')
 
 '''
