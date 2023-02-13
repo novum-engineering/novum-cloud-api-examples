@@ -4,10 +4,10 @@ const apiClient = new APIClient();
 
 (async () => {
   try {
-    await apiClient.login("YOUR_EMAIL", "YOUR_PASSWORD");
+    await apiClient.login("E-MAIL", "PASSWORD");
 
     // In order to get the "id" of the require battery one can do that copying the id from the Service Center or querying your battery and get its id
-    const battery = await apiClient.getBatteryById("BATTERY_ID");
+    const battery = await apiClient.getBatteryById("DATABASE_ID");
     console.log(battery);
   } catch (e: any) {
     console.error(e.details);

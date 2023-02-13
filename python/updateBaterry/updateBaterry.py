@@ -3,7 +3,7 @@ from NovumApiClient.NovumApiClient import NovumBatteriesClient
 api = NovumBatteriesClient('')
 
 try:
-  login = api.login('YOUR_EMAIL', 'YOUR_PASSWORD')
+  login = api.login('E-MAIL', 'PASSWORD')
   NEW_BATTERY_DATE = {
       'id': 'CREATE_AN_ID',
       'name': 'NAME_UPDATE_BATTERY',
