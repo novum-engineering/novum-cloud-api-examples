@@ -4,7 +4,7 @@ const apiClient = new APIClient();
 
 (async () => {
   try {
-    await apiClient.login("YOUR_EMAIL", "YOUR_PASSWORD");
+    await apiClient.login("E-MAIL", "PASSWORD");
 
     const batteryType = await apiClient.getBatteryTypeById(
       "BATTERY_TYPE_ID" // check in the Service Center or fetch after youve created your battery type
@@ -12,7 +12,7 @@ const apiClient = new APIClient();
 
     // In order to create a battery you need to define Partial<TBattery> object where name and battery type are mandatory
     const createdBattery = await apiClient.createBattery({
-      name: "NAME_OF_MY_BATTERY", // you can choose, should be clever maybe you have a lot of batteries in the future
+      name: "NAME", // you can choose, should be clever maybe you have a lot of batteries in the future
       battery_type: batteryType,
     });
 
