@@ -1,0 +1,9 @@
+This just demonstrates how to update a battery in order to nest it with other batteries.
+The method is quite useful if you have an battery storage or have information of the battery, module or cell level of a battery.
+
+```bash
+  # install dependencies
+  yarn install
+  # start example
+  yarn start
+```

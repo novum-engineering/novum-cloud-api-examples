@@ -1,7 +1,7 @@
 {
   "name": "novum-cloud-update-battery-example",
   "version": "1.0.0",
-  "description": "This code how to use our login function from novum-cloud-api-client",
+  "description": "This code how to use our updateBattery function from novum-cloud-api-client",
   "main": "updateBattery.ts",
   "repository": "https://github.com/novum-engineering/novum-cloud-api-examples",
   "author": "Leonardo <l.biz@novum-engineering.com>",

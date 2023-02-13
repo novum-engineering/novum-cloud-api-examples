@@ -3,7 +3,8 @@ import { PublicAPIClient as APIClient } from "@novum-batteries/cloud-api-client"
 const apiClient = new APIClient();
 
 (async () => {
-  try {    const user = await apiClient.login("E-MAIL", "PASSWORD");
+  try {
+    const user = await apiClient.login("E-MAIL", "PASSWORD");
 
     apiClient._setUser(user);
     console.log(

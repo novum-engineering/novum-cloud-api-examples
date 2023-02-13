@@ -1,14 +1,14 @@
 {
-  "name": "novum-cloud-get-battery-by-id-example",
+  "name": "novum-cloud-query-battery-example",
   "version": "1.0.0",
-  "description": "This code shows how to fetch batteries from our Service Center.",
-  "main": "getBatteryById.ts",
+  "description": "This code how to nest a battery updating some keys.",
+  "main": "nestBattery.ts",
   "repository": "https://github.com/novum-engineering/novum-cloud-api-examples",
   "author": "Leonardo <l.biz@novum-engineering.com>",
   "license": "MIT",
   "private": true,
   "scripts": {
-    "start": "ts-node getBatteryById.ts"
+    "start": "ts-node queryBatteries.ts"
   },
   "dependencies": {
     "@novum-batteries/cloud-api-client": "^1.0.0",
