@@ -1,4 +1,4 @@
-from NovumApiClient.NovumApiClient import NovumBatteriesClient
+from NovumApiClient.apiClientPublic import NovumBatteriesClient
 
 api = NovumBatteriesClient('')
 

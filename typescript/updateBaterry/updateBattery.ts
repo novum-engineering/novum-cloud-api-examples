@@ -6,19 +6,12 @@ const apiClient = new APIClient();
   try {
     await apiClient.login("E-MAIL", "PASSWORD");
     // In order to update information of a battery you need to define Partial<TBattery> object where id is mandatory
-    const parentBattery = await apiClient.getBatteryById("BATTERY_ID");
-    const NEST_BATTERY = {
-      id: parentBattery.id,
-      "tree.enable": true,
-      "insights.enable": true,
+    const updateBattery = await apiClient.getBatteryById("BATTERY_ID");
+    const NEW_BATTERY_INFO = {
+      id: updateBattery.id,
+      name: "updated battery",
     };
-    const answer = await apiClient.updateBattery(NEST_BATTERY);
-    // after the parent battery is enable to get childrens, one can create batteries like the following:
-    const childrenBattery = await apiClient.createBattery({
-      name: "firstChildren",
-      "tree.parent": parentBattery.id,
-      battery_type: parentBattery.battery_type,
-    });
+    const answer = await apiClient.updateBattery(NEW_BATTERY_INFO);
     console.log(answer);
   } catch (e) {
     console.error(e);

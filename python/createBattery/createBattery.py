@@ -1,10 +1,11 @@
-from NovumApiClient.NovumApiClient import NovumBatteriesClient
+from NovumApiClient.apiClientPublic import NovumBatteriesClient
 
 api = NovumBatteriesClient('')
 
+
 try:
   login = api.login('E-MAIL', 'PASSWORD')
-  get_battery_type = api.get_battery_types_by_id('DATABASE_ID') # check in the Service Center or fetch after youve created your battery type
+  get_battery_type = api.get_battery_types_by_id('BATTERY_TYEP_ID') # check in the Service Center or fetch after youve created your battery type
   print(get_battery_type)
   #In order to create a battery you need to define Partial<TBattery> object where name and battery type are mandatory
   create_battery = api.create_battery({

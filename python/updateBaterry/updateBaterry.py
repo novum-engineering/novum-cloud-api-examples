@@ -1,6 +1,7 @@
-from NovumApiClient.NovumApiClient import NovumBatteriesClient
+from NovumApiClient.apiClientPublic import NovumBatteriesClient
 
 api = NovumBatteriesClient('')
+
 
 try:
   login = api.login('E-MAIL', 'PASSWORD')

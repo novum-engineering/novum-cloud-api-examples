@@ -1,6 +1,7 @@
-from NovumApiClient.NovumApiClient import NovumBatteriesClient
+from NovumApiClient.apiClientPublic import NovumBatteriesClient
 
 api = NovumBatteriesClient('')
+
 
 try:
   login = api.login('E-MAIL', 'PASSWORD')
@@ -12,5 +13,5 @@ try:
     })
 
 except:
-   raise Exception(f"It was not possible to create a new battery type.")
+   raise Exception("It was not possible to create a new battery type.")
 

@@ -5,15 +5,22 @@ const apiClient = new APIClient();
 (async () => {
   try {
     await apiClient.login("E-MAIL", "PASSWORD");
-
-    // In order to query your battery you have 3 optional arguments to use: filters, options and fields as arguments
-    const filters = { name: "NAME" }; //  any {[key: string]: any;}
-    const options = { limit: 100 }; //{ sort?: { [key: string]: number },limit?: number,offset?: number}
-    const fields = {}; // any {[key: string]: number};
-    const batteries = await apiClient.getBatteries(filters, options, fields);
-
-    console.log(batteries);
-  } catch (e: any) {
-    console.error(e.details);
+    // In order to update information of a battery you need to define Partial<TBattery> object where id is mandatory
+    const parentBattery = await apiClient.getBatteryById("BATTERY_ID");
+    const NEST_BATTERY = {
+      id: parentBattery.id,
+      "tree.enabled": true,
+      "insights.enabled": true,
+    };
+    const update = await apiClient.updateBattery(NEST_BATTERY);
+    // after the parent battery is enable to get childrens, one can create batteries like the following:
+    const childrenBattery = await apiClient.createBattery({
+      name: "First children",
+      "tree.parent": parentBattery.id,
+      battery_type: parentBattery.battery_type,
+    });
+    console.log(childrenBattery);
+  } catch (e) {
+    console.error(e);
   }
 })();
