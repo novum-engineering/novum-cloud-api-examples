@@ -1,20 +1,32 @@
-from NovumApiClient.apiClientPublic import NovumBatteriesClient
+from novum_api_client.api_type import (
+    TBattery,
+    TBatteryEssentials,
+    TInsights,
+    TTreeProperties,
+)
+from novum_api_client.client import NovumAPIClient
 
-api = NovumBatteriesClient('')
+api = NovumAPIClient()
 
 try:
-    login = api.login('YOUR_EMAIL', 'YOUR_PASSWORD')
-    #In order to get the "id" of the require battery one can do that copying the id from the Service Center or querying your battery and get its id
+    login = api.login("YOUR_EMAIL", "YOUR_PASSWORD")
+    # In order to get the "id" of the require battery one can do that copying the id from the Service Center or querying your battery and get its id
     parent_battery = api.get_battery_by_id("YOUR_BATTERY_ID")
-    enable_parent={"id": parent_battery["id"],
-        "insights" : {"enabled" : True}}
-    update =  api.update_battery(enable_parent)
+    enable_parent = TBattery(
+        name=parent_battery.name,
+        battery_type=parent_battery.battery_type,
+        id=parent_battery.id,
+        insights=TInsights(enabled=True),
+    )
+    update = api.update_battery(enable_parent)
     # after the parent battery is enable to get childrens, one can create batteries like the following:
-    children_battery =api.create_battery({
-        "name": "First children",
-        "tree" : {"parent" : parent_battery["id"]},
-        "battery_type": parent_battery["battery_type"],
-    })
+    children_battery = api.create_battery(
+        TBatteryEssentials(
+            name="First Cell",
+            tree=TTreeProperties(parent=parent_battery.id),
+            battery_type=parent_battery.battery_type,
+        )
+    )
 
 except:
-    raise Exception('It was not possible to fetch your battery.')
+    raise Exception("It was not possible to fetch your battery.")

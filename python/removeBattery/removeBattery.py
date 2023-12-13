@@ -1,15 +1,14 @@
-from NovumApiClient.apiClientPublic import NovumBatteriesClient
+from novum_api_client.client import NovumAPIClient
 
-api = NovumBatteriesClient('')
+api = NovumAPIClient()
 
 try:
-  login = api.login('E-MAIL', 'PASSWORD')
-  '''In order to delete a battery you need to get the "id" of the require battery
-     one can do that copying the id from the Service Center or querying your battery and get its id'''
-  removed_battery = api.remove_battery_by_id("BATTERY_ID")
+    login = api.login("E-MAIL", "PASSWORD")
+    """In order to delete a battery you need to get the "id" of the require battery
+     one can do that copying the id from the Service Center or querying your battery and get its id"""
+    removed_battery = api.remove_battery_by_id("BATTERY_ID")
+    print("Your battery was removed.")
 
 
 except:
-   raise Exception("It was not possible to delete your battery.")
-
- 
+    raise Exception("It was not possible to delete your battery.")

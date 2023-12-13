@@ -1,0 +1,1 @@
+This just demonstrates how to fetch your batteries after successfull login. Using filters, options or fields you can restrict/limit the result.
