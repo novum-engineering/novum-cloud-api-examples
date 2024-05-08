@@ -1,5 +1,5 @@
 from novum_api_client.api_type import (
-    TBattery,
+    TBatteryReading,
     TBatteryEssentials,
     TInsights,
     TTreeProperties,
@@ -12,7 +12,7 @@ try:
     login = api.login("YOUR_EMAIL", "YOUR_PASSWORD")
     # In order to get the "id" of the require battery one can do that copying the id from the Service Center or querying your battery and get its id
     parent_battery = api.get_battery_by_id("YOUR_BATTERY_ID")
-    enable_parent = TBattery(
+    enable_parent = TBatteryReading(
         name=parent_battery.name,
         battery_type=parent_battery.battery_type,
         id=parent_battery.id,

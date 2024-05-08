@@ -1,6 +1,6 @@
-Do not forget to install the basic setup to run your .ts files
+Do not forget to install the basic setup to run your python files
 
-- install [Python](https://www.python.org/downloads/) 3.10 or higher
+- install [Python](https://www.python.org/downloads/) 3.8.1 or higher
 - install [pip](https://pip.pypa.io/en/stable/cli/pip_install/)
 
 
@@ -15,10 +15,10 @@ To install our library:
 
 ### examples
 
-- [login](python/login/readme.md)
-- [create a battery type](python/createBatteryType/readme.md)
-- [create a battery](python/createBattery/readme.md)
-- [get your battery](python/getBatteryById/readme.md)
-- [query batteries](python/queryBatteries/readme.md)
-- [update a battery](python/updateBattery/readme.md)
-- [remove a battery](python/removeBatteryById/readme.md)
+- [login](login/readme.md)
+- [create a battery type](createBatteryType/readme.md)
+- [create a battery](createBattery/readme.md)
+- [get your battery](getBatteryById/readme.md)
+- [query batteries](queryBatteries/readme.md)
+- [update a battery](updateBattery/readme.md)
+- [remove a battery](removeBatteryById/readme.md)

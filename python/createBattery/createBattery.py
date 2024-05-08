@@ -7,7 +7,7 @@ try:
     login = api.login("YOUR_EMAIL", "YOUR_PASSWORD")
     get_battery_type = api.get_battery_types_by_id(
         "BATTERY_TYPE_ID"
-    )  # Check in the Service Center or fetch after youve created your battery type.
+    )  # Check in the Service Center or fetch after you've created your battery type using create_battery_type.id.
     print("My battery type:", get_battery_type)
     # In order to create a battery you need to define a TBatteryEssentials object where name and battery type are mandatory.
     create_battery = api.create_battery(

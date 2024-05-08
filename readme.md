@@ -24,7 +24,7 @@ Before diving into the examples, make sure to review the [official REST API docu
 
 ### Python Examples
 
-Explore the Python examples in the [`python-examples`](python) directory. Inside tis folder you find the procedure to install our python library and their dependencies. Moreover, one can find the examples on each folder.
+Explore the Python examples in the [`python-examples`](python) directory. Inside tis folder you find the procedure to install our python library and their dependencies. Moreover, one can find the examples on each folder working for the most recent version.
 
 ### TypeScript Examples
 
