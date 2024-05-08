@@ -17,11 +17,11 @@ yarn add ts-node
 
 Under this repository one can find the following examples:
 
-- [login](login/readme.md)
-- [create a battery type](createBatteryType/readme.md)
-- [create a battery](createBattery/readme.md)
-- [get your battery](getBatteryById/readme.md)
-- [nest a battery](nestBattery/readme.md)
-- [query batteries](queryBatteries/readme.md)
-- [update a battery](updateBattery/readme.md)
-- [remove a battery](removeBatteryById/readme.md)
+- [login](login)
+- [create a battery type](createBatteryType)
+- [create a battery](createBattery)
+- [get your battery](getBatteryById)
+- [nest a battery](nestBattery)
+- [query batteries](queryBatteries)
+- [update a battery](updateBattery)
+- [remove a battery](removeBatteryById)
