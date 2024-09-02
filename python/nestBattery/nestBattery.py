@@ -1,8 +1,8 @@
 from novum_api_client.api_type import (
-    TBatteryReading,
-    TBatteryEssentials,
     TInsights,
+    TBatteryReading,
     TTreeProperties,
+    TBatteryRequired,
 )
 from novum_api_client.client import NovumAPIClient
 
@@ -19,13 +19,13 @@ try:
         insights=TInsights(enabled=True),
     )
     update = api.update_battery(enable_parent)
-    # after the parent battery is enable to get childrens, one can create batteries like the following:
+    # after the parent battery is enable to get children, one can create batteries like the following:
     children_battery = api.create_battery(
-        TBatteryEssentials(
+        TBatteryRequired(
             name="First Cell",
             tree=TTreeProperties(parent=parent_battery.id),
             battery_type=parent_battery.battery_type,
-        )
+    )
     )
 
 except:

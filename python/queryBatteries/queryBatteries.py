@@ -1,4 +1,5 @@
 from novum_api_client.client import NovumAPIClient
+from novum_api_client.api_type import  ApiOptions
 
 api = NovumAPIClient()
 
@@ -13,7 +14,7 @@ try:
         "name": 1
     }  # The function will return only the required field. The rest is populated with None
 
-    batteries = api.get_batteries(filters, options, fields)
+    batteries = api.get_batteries(api_options=ApiOptions(filter=filters, option=options, fields=fields))
     print("My batteries:", batteries)
 except:
     raise Exception(f"It was not possible to fetch your battery.")

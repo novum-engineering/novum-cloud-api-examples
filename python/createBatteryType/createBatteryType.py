@@ -1,13 +1,13 @@
 from novum_api_client.client import NovumAPIClient
-from novum_api_client.api_type import TBatteryTypeEssentials
+from novum_api_client.api_type import TBatteryTypeRequired
 
 api = NovumAPIClient()
 
 try:
     login = api.login("YOUR_EMAIL", "YOUR_PASSWORD")
-    # In order to create a battery type you need to define a TBatteryTypeEssentials object where name, manufacturer, nominal_voltage and nominal_capacity are mandatory.
+    # In order to create a battery type you need to define a TBatteryTypeRequired object where name, manufacturer, nominal_voltage and nominal_capacity are mandatory.
     create_battery_type = api.create_battery_type(
-        TBatteryTypeEssentials(
+        TBatteryTypeRequired(
             name="NAME",  # You can choose an unique name.
             manufacturer="BATTERY_PRODUCER",
             nominal_voltage=3.6,  # in SI unit of Volts
